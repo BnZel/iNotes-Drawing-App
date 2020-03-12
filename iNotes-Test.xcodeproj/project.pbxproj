@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		690BFF5E2419E7C800C2B098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BFF5D2419E7C800C2B098 /* AppDelegate.swift */; };
-		690BFF602419E7C800C2B098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BFF5F2419E7C800C2B098 /* ViewController.swift */; };
 		690BFF632419E7C800C2B098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690BFF612419E7C800C2B098 /* Main.storyboard */; };
 		690BFF652419E7D100C2B098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690BFF642419E7D100C2B098 /* Assets.xcassets */; };
 		690BFF682419E7D100C2B098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690BFF662419E7D100C2B098 /* LaunchScreen.storyboard */; };
 		690BFF732419E7D200C2B098 /* iNotes_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BFF722419E7D200C2B098 /* iNotes_TestTests.swift */; };
 		690BFF7E2419E7D200C2B098 /* iNotes_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BFF7D2419E7D200C2B098 /* iNotes_TestUITests.swift */; };
+		691A6626241A055F008B1702 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691A6625241A055F008B1702 /* DrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		690BFF5A2419E7C800C2B098 /* iNotes-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iNotes-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		690BFF5D2419E7C800C2B098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		690BFF5F2419E7C800C2B098 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		690BFF622419E7C800C2B098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		690BFF642419E7D100C2B098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		690BFF672419E7D100C2B098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		690BFF792419E7D200C2B098 /* iNotes-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iNotes-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		690BFF7D2419E7D200C2B098 /* iNotes_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iNotes_TestUITests.swift; sourceTree = "<group>"; };
 		690BFF7F2419E7D200C2B098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		691A6625241A055F008B1702 /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				690BFF5D2419E7C800C2B098 /* AppDelegate.swift */,
-				690BFF5F2419E7C800C2B098 /* ViewController.swift */,
 				690BFF612419E7C800C2B098 /* Main.storyboard */,
+				691A6625241A055F008B1702 /* DrawViewController.swift */,
 				690BFF642419E7D100C2B098 /* Assets.xcassets */,
 				690BFF662419E7D100C2B098 /* LaunchScreen.storyboard */,
 				690BFF692419E7D100C2B098 /* Info.plist */,
@@ -255,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690BFF602419E7C800C2B098 /* ViewController.swift in Sources */,
+				691A6626241A055F008B1702 /* DrawViewController.swift in Sources */,
 				690BFF5E2419E7C800C2B098 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iNotes-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iNotes-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +470,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iNotes-TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +491,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iNotes-TestTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,8 +509,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Flip;
 				INFOPLIST_FILE = "iNotes-TestUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,8 +531,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Flip;
 				INFOPLIST_FILE = "iNotes-TestUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -80,6 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="A5V-CV-RtS"/>
                     </view>
                     <connections>
+                        <outlet property="mainImageView" destination="771-wh-uD0" id="uOg-zw-u5a"/>
                         <outlet property="tempImageView" destination="5Z5-oE-HtV" id="guL-dp-HOs"/>
                     </connections>
                 </viewController>

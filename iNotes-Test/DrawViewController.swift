@@ -16,6 +16,7 @@ class DrawViewController: UIViewController {
     var swiped = false //if the brush stroke is continuous
     
     @IBOutlet weak var tempImageView: UIImageView!
+    @IBOutlet weak var mainImageView: UIImageView!
     
     // UIResponder (parent class of touch-notifying methods)
     // user puts a finger down on the screen.
@@ -72,6 +73,22 @@ class DrawViewController: UIViewController {
         lastPoint = currentPoint
     }
 
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !swiped {
+            // draw a single point
+            drawLine(from: lastPoint, to: lastPoint)
+        }
+        
+        // Merge tempImageView into mainImageView
+        UIGraphicsBeginImageContext(mainImageView.frame.size)
+        mainImageView.image?.draw(in: view.bounds, blendMode: .normal, alpha: 1.0)
+        tempImageView?.image?.draw(in: view.bounds, blendMode: .normal, alpha: opacity)
+        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        tempImageView.image = nil
+    }
+    
     @IBAction func btnPencilPressed(_ sender: UIButton) {
         print("pencil")
     }
@@ -81,6 +98,7 @@ class DrawViewController: UIViewController {
     }
     
     @IBAction func btnResetPressed(_ sender: UIButton) {
+        mainImageView.image = nil
         print("reset")
     }
     

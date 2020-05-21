@@ -1,5 +1,7 @@
 # iNotes
 
-### Jason 
-### Hristo 
-### Aregawi 
+IOS Prototype for a drawing app called **iNotes**
+
+* Jason 
+* Hristo 
+* Aregawi 
